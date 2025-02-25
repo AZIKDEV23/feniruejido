@@ -1,151 +1,39 @@
-{% load static %}
-
-<!-- Start Navbar Area -->
-<div class="navbar-area">
-  <!-- Menu For Mobile Device -->
-   <div class="mobile-nav">
-      <a href="index.html" class="logo">
-          <img src="{% static "img/logo.png" %}" class="logo-one" alt="Logo">
-          <img src="{% static "img/sticky-logo.png" %}" class="logo-two" alt="Logo">
-      </a>
-  </div>
-
-  <!-- Menu For Desktop Device -->
-  <div class="main-nav top-nav">
-      <div class="container">
-          <nav class="navbar navbar-expand-md navbar-light ">
-              <a class="navbar-brand" href="{% url 'home' %}">
-                  <img src="{% static "img/logo.png" %}" alt="Logo">
-              </a>
-              <a class="navbar-brand-sticky" href="{% url 'home' %}">
-                  <img src="{% static 'img/sticky-logo.png' %}" alt="Logo">
-              </a>
-
-              <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-                  <ul class="navbar-nav m-auto">
-                      <li class="nav-item">
-                          <a href="{% url "home" %}" class="nav-link">
-                              Home 
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="{% url 'about' %}" class="nav-link">
-                              About
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="#" class="nav-link">
-                              Pages 
-                              <i class='bx bxs-chevron-right'></i>
-                          </a>
-                          <ul class="dropdown-menu">
-                              <li class="nav-item">
-                                  <a href="{% url 'members' %}" class="nav-link">
-                                      Members
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url 'portfolio' %}" class="nav-link">
-                                      Portfolio
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url 'pricing' %}" class="nav-link">
-                                      Pricing
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url '404' %}" class="nav-link">
-                                      404 Page
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url 'faq' %}" class="nav-link">
-                                      FAQ
-                                  </a>
-                              </li>
-                             
-                              <li class="nav-item">
-                                  <a href="{% url 'sign-in' %}" class="nav-link">
-                                      Sign In
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url 'sign-up' %}" class="nav-link">
-                                      Sign Up
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url 'recover_password' %}" class="nav-link">Recover Password</a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url 'terms_condition' %}" class="nav-link">
-                                      Terms & Conditions
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="{% url 'privacy_policy' %}" class="nav-link">
-                                      Privacy Policy
-                                  </a>
-                              </li>
-                              <li class="nav-item">
-                                  <a href="#" class="nav-link">
-                                      Level 1
-                                      <i class="bx bx-chevron-right"></i>
-                                  </a>
-                                  <ul class="dropdown-menu">
-                                      <li class="nav-item">
-                                          <a href="#" class="nav-link">Level 2</a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a href="#" class="nav-link">Level 2</a>
-                                      </li>
-                                      <li class="nav-item">
-                                          <a href="#" class="nav-link">
-                                              Level 2
-                                              <i class="bx bx-chevron-right"></i>
-                                          </a>
-                                          <ul class="dropdown-menu">
-                                              <li class="nav-item">
-                                                  <a href="#" class="nav-link">Level 3</a>
-                                              </li>
-                                              <li class="nav-item">
-                                                  <a href="#" class="nav-link">Level 3</a>
-                                              </li>
-                                          </ul>
-                                      </li>
-                                  </ul>
-                              </li>
-                          </ul>
-                      </li>
-                      <li class="nav-item">
-                          <a href="{% url "services" %}" class="nav-link">
-                              Services 
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="{% url 'testimonial' %}" class="nav-link">
-                              Testimonial
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="{% url "blog" %}" class="nav-link">
-                              Blog 
-                          </a>
-                      </li>
-                      <li class="nav-item">
-                          <a href="{% url "contact" %}" class="nav-link">
-                              Contact
-                          </a>
-                      </li>
-                  </ul>
-
-                  <div class="menu-btn">
-                      <a href="#" class="seo-btn">SEO Score</a>
-                  </div>
-              </div>
-          </nav>
-      </div>
-  </div>
+<!-- navbar top -->
+<div class="navbar-top">
+    <div class="side-nav-panel-left">
+        <a href="#" data-activates="slide-out-left" class="side-nav-left"><i class="fa fa-bars"></i></a>
+    </div>
+    <!-- site brand	 -->
+    <div class="site-brand">
+        <a href="index.html"><h1>DAILY NEWS</h1></a>
+    </div>
+    <!-- end site brand	 -->
+    <div class="side-nav-panel-right">
+        <a href="contact.html"><i class="fa fa-envelope-o"></i></a>
+    </div>
 </div>
-<!-- End Navbar Area -->
+<!-- end navbar top -->
+
+
+<!-- side nav panel-->
+<div class="side-nav-panel-left">
+    <ul id="slide-out-left" class="side-nav side-nav-panel collapsible">
+        <li class="li-search">
+            <div class="search-form">
+                <input type="search" placeholder="Search....">
+                <button class="button"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="clear-both"></div>
+        </li>
+        <li><a href="{% url "home" %}"><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="{% url "single-post" %}"><i class="fa fa-file-o"></i>Single Post</a></li>
+        <li><a href="{% url "author" %}"><i class="fa fa-edit"></i>Author Page</a></li>
+        <li><a href="{% url "search" %}"><i class="fa fa-search"></i>Search Result</a></li>
+        <li><a href="{% url "about" %}"><i class="fa fa-user"></i>About Us</a></li>
+        <li><a href="{% url "contact" %}"><i class="fa fa-envelope-o"></i>Contact Us</a></li>
+        <li><a href="{% url "error" %}"><i class="fa fa-cog"></i>404 Pages</a></li>
+        <li><a href="{% url "login" %}"><i class="fa fa-sign-in"></i>Login</a></li>
+        <li><a href="{% url "register" %}"><i class="fa fa-user-plus"></i>Register</a></li>
+    </ul>
+</div>
+<!-- end side nav panel-->
